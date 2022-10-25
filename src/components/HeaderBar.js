@@ -40,6 +40,17 @@ const HeaderBar = (props) =>
                         <span>Mobility</span>
                     </label>
                 </li>
+                <li className="filter-dropdown-list-item">
+                    <select name="cars" id="cars">
+                        <option selected="true" disabled="disabled">Select platform</option>
+                        <option value="any">Any</option>
+                        <option value="browser">Browser</option>
+                        <option value="windows">Windows</option>
+                        <option value="macos">MacOS</option>
+                        <option value="android">Android</option>
+                        <option value="ios">iOS</option>
+                    </select>
+                </li>
             </ul>
         </header>
     )

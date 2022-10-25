@@ -1,4 +1,9 @@
 import './Thing.css'
+import { IconContext } from "react-icons";
+
+import { BsFillPhoneFill, BsLaptopFill } from 'react-icons/bs'
+import { IoIosBrowsers } from 'react-icons/io'
+import { RiSmartphoneFill, RiMacbookFill } from 'react-icons/ri'
 
 const Thing = (props) =>
 {
@@ -12,6 +17,23 @@ const Thing = (props) =>
 
             <div className="card-image-container">
                 {props.image.length > 0 && <img alt={""} className="card-image" src={require('../images/' + props.image)} />}
+            </div>
+
+            <div className="platform-support-wrapper">
+                <IconContext.Provider value={{ color: '#d1e4ff', size: '1.5rem', className: "card-platform-icon" }}>
+                    {props.platformSupport.length > 0 && props.platformSupport.map((platform, index) =>
+                    {
+                        switch (platform) 
+                        {
+                            case "browser": return <div className='card-platform-item'><IoIosBrowsers /><p className='card-platform-label'>Browser</p></div>
+                            case "android": return <div className='card-platform-item'><BsFillPhoneFill /><p className='card-platform-label'>Android</p></div>
+                            case "ios": return <div className='card-platform-item'><RiSmartphoneFill /><p className='card-platform-label'>iOS</p></div>
+                            case "windows": return <div className='card-platform-item'><BsLaptopFill /><p className='card-platform-label'>Windows</p></div>
+                            case "macos": return <div className='card-platform-item'><RiMacbookFill /><p className='card-platform-label'>MacOS</p></div>
+                            default: return <></>
+                        }
+                    })}
+                </IconContext.Provider>
             </div>
 
             <h3 className="card-title">{props.title}</h3>

@@ -17,6 +17,8 @@
     z-index: 2;
 
     padding-bottom: 10px;
+
+    /* border-bottom: solid 1px var(--main-1); */
 }
 
 
@@ -61,6 +63,10 @@ input[type="checkbox"] {
     margin: 0;
 }
 
+li:nth-last-child(2) {
+    margin-right: 20px;
+}
+
 span {
     display: inline-block;
     user-select: none;
@@ -69,12 +75,31 @@ span {
     padding: 10px 15px;
     border-radius: 5px;
 
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--main-1);
 
     background-color: var(--back-1);
 }
 
 input[type="checkbox"]:checked+span {
-    outline: 1px solid var(--main-1);
+    outline: 2px solid var(--main-1);
+}
+
+select {
+    appearance: none;
+
+    padding: 10px 40px 10px 15px;
+    height: 100%;
+    border-radius: 5px;
+
+    font-size: 1rem;
+    color: var(--main-1);
+
+    background-color: var(--back-1);
+
+    border: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='30' viewBox='0 0 24 24' width='40' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
 }
