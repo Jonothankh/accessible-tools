@@ -1,0 +1,25 @@
+.introduction-section {
+    max-width: 40rem;
+
+    margin: 20px auto 40px auto;
+
+    text-align: center;
+}
+
+.introduction-title {
+    margin: 0;
+    font-weight: normal;
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    color: var(--main-1);
+}
+
+.introduction-subtitle {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.5rem;
+
+    color: var(--main-1);
+}
