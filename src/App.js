@@ -1,4 +1,7 @@
 import './App.css';
+
+import { useState } from "react";
+
 import HeaderBar from './components/HeaderBar';
 import Introduction from './components/Introduction';
 import PageWrapper from './components/PageWrapper';
@@ -11,11 +14,40 @@ import things from './data/things'
 
 function App()
 {
+  const [selectedCategories, setSelectedCategories] = useState(
+    {
+      hearing: false,
+      vision: false,
+      neurodiversity: false,
+      mobility: false
+    }
+  )
+
+  const [selectedPlatform, setSelectedPlatform] = useState('any')
+
 
   return (
     <div className="App">
 
-      <HeaderBar />
+      <HeaderBar
+        onChangeCategory={(category, event) => 
+        {
+          console.log(category, event)
+
+          setSelectedCategories(prevState => (
+            {
+              ...prevState,
+              [category]: event,
+            }
+          ))
+        }
+        }
+        onChangePlatform={(event) => 
+        {
+          console.log(event)
+        }
+        }
+      />
 
       <PageWrapper>
 
@@ -23,23 +55,28 @@ function App()
 
         <Things>
 
-          {things.map((thing, index) => (
+          {things.filter(
+            thing => thing.categories.includes()
 
-            <Thing
+          )
 
-              key={"thing_" + index}
+            .map((thing, index) => (
 
-              categories={thing.categories}
-              image={thing.image}
-              title={thing.title}
-              description={thing.description}
-              platformSupport={thing.platformSupport}
-              stack={thing.stack}
-              links={thing.links}
+              <Thing
 
-            />
+                key={"thing_" + index}
 
-          ))}
+                categories={thing.categories}
+                image={thing.image}
+                title={thing.title}
+                description={thing.description}
+                platformSupport={thing.platformSupport}
+                stack={thing.stack}
+                links={thing.links}
+
+              />
+
+            ))}
 
         </Things>
 

@@ -11,7 +11,7 @@ const Thing = (props) =>
         <div className="card">
             <div className="card-categories-wrapper">
                 {props.categories.length > 0 && props.categories.map((tag, index) => (
-                    <div key={"tag_" + index} className="card-category">{tag}</div>
+                    <div key={"category_" + index} className="card-category">{tag}</div>
                 ))}
             </div>
 
@@ -25,11 +25,11 @@ const Thing = (props) =>
                     {
                         switch (platform) 
                         {
-                            case "browser": return <div className='card-platform-item'><IoIosBrowsers /><p className='card-platform-label'>Browser</p></div>
-                            case "android": return <div className='card-platform-item'><BsFillPhoneFill /><p className='card-platform-label'>Android</p></div>
-                            case "ios": return <div className='card-platform-item'><RiSmartphoneFill /><p className='card-platform-label'>iOS</p></div>
-                            case "windows": return <div className='card-platform-item'><BsLaptopFill /><p className='card-platform-label'>Windows</p></div>
-                            case "macos": return <div className='card-platform-item'><RiMacbookFill /><p className='card-platform-label'>MacOS</p></div>
+                            case "browser": return <div key={"platform_" + index} className='card-platform-item'><IoIosBrowsers /><p className='card-platform-label'>Browser</p></div>
+                            case "android": return <div key={"platform_" + index} className='card-platform-item'><BsFillPhoneFill /><p className='card-platform-label'>Android</p></div>
+                            case "ios": return <div key={"platform_" + index} className='card-platform-item'><RiSmartphoneFill /><p className='card-platform-label'>iOS</p></div>
+                            case "windows": return <div key={"platform_" + index} className='card-platform-item'><BsLaptopFill /><p className='card-platform-label'>Windows</p></div>
+                            case "macos": return <div key={"platform_" + index} className='card-platform-item'><RiMacbookFill /><p className='card-platform-label'>MacOS</p></div>
                             default: return <></>
                         }
                     })}
