@@ -123,6 +123,7 @@ select {
     .filter-wrapper::after {
         left: 30px;
         right: 30px;
+        transform: translateY(-2px);
         content: "";
         position: absolute;
         height: 50px;
