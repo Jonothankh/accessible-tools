@@ -9,11 +9,11 @@ const HeaderBar = (props) =>
         const fromLeft = event.target.scrollLeft;
         const fromRight = (event.target.scrollWidth - event.target.clientWidth) - event.target.scrollLeft
 
-        if (fromLeft === 0)
+        if (fromLeft < 5)
         {
             setFilterScroll("start")
         }
-        else if (fromRight === 0)
+        else if (fromRight < 5)
         {
             setFilterScroll("end")
         } else
