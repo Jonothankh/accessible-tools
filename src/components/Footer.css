@@ -1,11 +1,12 @@
 footer {
     text-align: center;
+    margin-top: 50px;
 }
 
-.copyright-notice {
+.notice {
     color: var(--main-1);
 }
 
-.copyright-notice a {
+.notice a {
     color: var(--main-1);
 }
