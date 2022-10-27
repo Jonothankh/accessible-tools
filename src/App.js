@@ -82,9 +82,9 @@ function App()
 
         </Things>
 
-        <Footer />
-
       </PageWrapper>
+
+      <Footer />
 
     </div>
   );

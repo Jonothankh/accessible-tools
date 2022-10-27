@@ -9,7 +9,7 @@ const Thing = (props) =>
 {
     return (
         <div className="card">
-            <div className="card-categories-wrapper">
+            <div className="card-categories-wrapper" aria-hidden="true">
                 {props.categories.length > 0 && props.categories.map((tag, index) => (
                     <div key={"category_" + index} className="card-category">{tag}</div>
                 ))}
@@ -19,7 +19,7 @@ const Thing = (props) =>
                 {props.image.length > 0 && <img alt={""} className="card-image" src={require('../images/' + props.image)} />}
             </div>
 
-            <div className="platform-support-wrapper">
+            <div className="platform-support-wrapper" aria-hidden="true">
                 <IconContext.Provider value={{ color: '#d1e4ff', size: '1.5rem', className: "card-platform-icon" }}>
                     {props.platformSupport.length > 0 && props.platformSupport.map((platform, index) =>
                     {
@@ -36,9 +36,10 @@ const Thing = (props) =>
                 </IconContext.Provider>
             </div>
 
-            <h3 className="card-title">{props.title}</h3>
+            <h2 className="card-title">{props.title}</h2>
 
             <p className="card-description">{props.description}</p>
+            <div className='screen-reader-only'>{"Supported on: " + props.platformSupport.join(', ')}</div>
 
             <div className="card-links-wrapper">
                 {Object.keys(props.links).length > 0 && Object.keys(props.links).map((link, index) => (

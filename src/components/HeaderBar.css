@@ -39,7 +39,7 @@
 
 .filter-wrapper {
     list-style-type: none;
-    padding: 10px 0;
+    padding: 10px 2px;
 
     display: flex;
     /* flex-wrap: wrap; */
@@ -54,6 +54,7 @@
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+
 }
 
 .filter-wrapper::-webkit-scrollbar {
@@ -92,8 +93,13 @@ span {
     background-color: var(--back-1);
 }
 
+input[type="checkbox"]:focus+span {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
 input[type="checkbox"]:checked+span {
-    outline: 2px solid var(--main-1);
+    color: var(--main-2);
+    background-color: var(--main-1);
 }
 
 select {
@@ -113,4 +119,29 @@ select {
     background-repeat: no-repeat;
     background-position-x: 100%;
     background-position-y: 5px;
+}
+
+@media (max-width: 670px) {
+    .filter-wrapper::after {
+        left: 30px;
+        right: 30px;
+        content: "";
+        position: absolute;
+        height: 50px;
+        box-sizing: border-box;
+        pointer-events: none;
+        background: transparent;
+    }
+
+    .filter-wrapper.middle::after {
+        background: linear-gradient(to right, var(--main-2) 0%, transparent 20%), linear-gradient(to right, transparent 80%, var(--main-2) 100%);
+    }
+
+    .filter-wrapper.start::after {
+        background: linear-gradient(to right, transparent 80%, var(--main-2) 100%);
+    }
+
+    .filter-wrapper.end::after {
+        background: linear-gradient(to right, var(--main-2) 0%, transparent 20%);
+    }
 }

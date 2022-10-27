@@ -1,7 +1,7 @@
 .card {
     /* flex: 1 1 300px; */
     flex: 1 1 450px;
-    max-width: 600px;
+    max-width: 1000px;
 
     padding: 20px 0;
     border-radius: 5px;
@@ -50,8 +50,10 @@
 .card-image {
     width: 100%;
     /* border-radius: 20px; */
-    /* border-top: solid 2px var(--main-1);
-    border-bottom: solid 2px var(--main-1); */
+    border-top: solid 5px var(--main-2);
+    border-bottom: solid 5px var(--main-2);
+    max-height: 300px;
+    object-fit: cover;
 }
 
 .platform-support-wrapper {
@@ -95,6 +97,15 @@
     margin: 15px 0;
 
     color: var(--main-1);
+}
+
+.screen-reader-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .card-links-wrapper {
