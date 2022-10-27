@@ -59,6 +59,7 @@ function App()
 
         <SearchInfo
           filteredTotal={filteredTotal}
+          thingsTotal={things.length}
         />
 
         <Things>
