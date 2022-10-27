@@ -43,37 +43,40 @@ const HeaderBar = (props) =>
                 <li className="filter-checkbox-list-item">
                     <label>
                         <input
-                            aria-hidden="true"
+                            // aria-hidden="true"
+                            aria-labelledby='hearing_checkbox'
                             type="checkbox"
                             name="hearing"
 
                             onChange={event => { props.onChangeCategory("hearing", event.target.checked) }}
                         />
-                        <span >Hearing</span>
+                        <span id="hearing_checkbox" aria-hidden="true">Hearing</span>
                     </label>
                 </li>
                 <li className="filter-checkbox-list-item">
                     <label>
                         <input
-                            aria-hidden="true"
+                            // aria-hidden="true"
+                            aria-labelledby='neurodiversity_checkbox'
                             type="checkbox"
                             name="neurodiveristy"
 
                             onChange={event => { props.onChangeCategory("neurodiversity", event.target.checked) }}
                         />
-                        <span >Neurodiversity</span>
+                        <span id="neurodiversity_checkbox" aria-hidden="true">Neurodiversity</span>
                     </label>
                 </li>
                 <li className="filter-checkbox-list-item">
                     <label>
                         <input
-                            aria-hidden="true"
+                            // aria-hidden="true"
+                            aria-labelledby='mobility_checkbox'
                             type="checkbox"
                             name="mobility"
 
                             onChange={event => { props.onChangeCategory("mobility", event.target.checked) }}
                         />
-                        <span >Mobility</span>
+                        <span id="mobility_checkbox" aria-hidden="true">Mobility</span>
                     </label>
                 </li>
                 <li className="filter-dropdown-list-item">
