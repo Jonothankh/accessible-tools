@@ -25,6 +25,10 @@ function App()
 
   const [selectedPlatform, setSelectedPlatform] = useState('any')
 
+  const [numberOfThings, setNumberOfThings] = useState(things.length)
+
+  const [filteredThings, setFilteredThings] = useState(things)
+
 
   return (
     <div className="App">
@@ -32,8 +36,6 @@ function App()
       <HeaderBar
         onChangeCategory={(category, event) => 
         {
-          console.log(category, event)
-
           setSelectedCategories(prevState => (
             {
               ...prevState,
@@ -44,7 +46,7 @@ function App()
         }
         onChangePlatform={(event) => 
         {
-          console.log(event)
+          setSelectedPlatform(event)
         }
         }
       />
@@ -55,28 +57,30 @@ function App()
 
         <Things>
 
-          {things.filter(
-            thing => thing.categories.includes()
+          {
+            things.filter((thing) =>
+              (selectedCategories.hearing ? thing.categories.includes("Hearing") : true)
+              && (selectedCategories.vision ? thing.categories.includes("Vision") : true)
+              && (selectedCategories.neurodiversity ? thing.categories.includes("Neurodiversity") : true)
+              && (selectedCategories.mobility ? thing.categories.includes("Mobility") : true)
+              && (selectedPlatform === "any" ? true : thing.platformSupport.includes(selectedPlatform))
+            )
 
-          )
+              .map((thing, index) => (
+                <Thing
 
-            .map((thing, index) => (
+                  key={"thing_" + index}
 
-              <Thing
-
-                key={"thing_" + index}
-
-                categories={thing.categories}
-                image={thing.image}
-                title={thing.title}
-                description={thing.description}
-                platformSupport={thing.platformSupport}
-                stack={thing.stack}
-                links={thing.links}
-
-              />
-
-            ))}
+                  categories={thing.categories}
+                  image={thing.image}
+                  title={thing.title}
+                  description={thing.description}
+                  platformSupport={thing.platformSupport}
+                  stack={thing.stack}
+                  links={thing.links}
+                />
+              ))
+          }
 
         </Things>
 
