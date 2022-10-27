@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from "react";
 
 import HeaderBar from './components/HeaderBar';
-import Introduction from './components/Introduction';
+import SearchInfo from './components/SearchInfo';
 import PageWrapper from './components/PageWrapper';
 import Thing from './components/Thing';
 import Things from './components/Things';
@@ -25,10 +25,14 @@ function App()
 
   const [selectedPlatform, setSelectedPlatform] = useState('any')
 
-  const [numberOfThings, setNumberOfThings] = useState(things.length)
-
-  const [filteredThings, setFilteredThings] = useState(things)
-
+  const filteredItems = things.filter((thing) =>
+    (selectedCategories.hearing ? thing.categories.includes("Hearing") : true)
+    && (selectedCategories.vision ? thing.categories.includes("Vision") : true)
+    && (selectedCategories.neurodiversity ? thing.categories.includes("Neurodiversity") : true)
+    && (selectedCategories.mobility ? thing.categories.includes("Mobility") : true)
+    && (selectedPlatform === "any" ? true : thing.platformSupport.includes(selectedPlatform))
+  )
+  const filteredTotal = filteredItems.length
 
   return (
     <div className="App">
@@ -53,33 +57,27 @@ function App()
 
       <PageWrapper>
 
-        <Introduction />
+        <SearchInfo
+          filteredTotal={filteredTotal}
+        />
 
         <Things>
 
           {
-            things.filter((thing) =>
-              (selectedCategories.hearing ? thing.categories.includes("Hearing") : true)
-              && (selectedCategories.vision ? thing.categories.includes("Vision") : true)
-              && (selectedCategories.neurodiversity ? thing.categories.includes("Neurodiversity") : true)
-              && (selectedCategories.mobility ? thing.categories.includes("Mobility") : true)
-              && (selectedPlatform === "any" ? true : thing.platformSupport.includes(selectedPlatform))
-            )
+            filteredItems.map((thing, index) => (
+              <Thing
 
-              .map((thing, index) => (
-                <Thing
+                key={"thing_" + index}
 
-                  key={"thing_" + index}
-
-                  categories={thing.categories}
-                  image={thing.image}
-                  title={thing.title}
-                  description={thing.description}
-                  platformSupport={thing.platformSupport}
-                  stack={thing.stack}
-                  links={thing.links}
-                />
-              ))
+                categories={thing.categories}
+                image={thing.image}
+                title={thing.title}
+                description={thing.description}
+                platformSupport={thing.platformSupport}
+                stack={thing.stack}
+                links={thing.links}
+              />
+            ))
           }
 
         </Things>

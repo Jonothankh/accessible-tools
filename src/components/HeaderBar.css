@@ -37,16 +37,27 @@
 
 }
 
-.filter-checkbox-wrapper {
+.filter-wrapper {
     list-style-type: none;
-    padding: 0;
+    padding: 10px 0;
 
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+
+    overflow: scroll;
 
     gap: 10px;
 
     margin-bottom: 10px;
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.filter-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .filter-checkbox-list-item {

@@ -4,7 +4,7 @@ const Footer = (props) =>
 {
     return (
         <footer>
-            <p className='copyright-notice'>© 2022 Jonothan Hunt</p>
+            <p className='copyright-notice'>By <a href='https://jonothan.dev'>Jonothan</a></p>
         </footer>
     )
 

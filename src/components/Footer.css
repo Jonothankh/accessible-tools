@@ -5,3 +5,7 @@ footer {
 .copyright-notice {
     color: var(--main-1);
 }
+
+.copyright-notice a {
+    color: var(--main-1);
+}

@@ -50,8 +50,8 @@
 .card-image {
     width: 100%;
     /* border-radius: 20px; */
-    border-top: solid 2px var(--main-1);
-    border-bottom: solid 2px var(--main-1);
+    /* border-top: solid 2px var(--main-1);
+    border-bottom: solid 2px var(--main-1); */
 }
 
 .platform-support-wrapper {
