@@ -1,6 +1,6 @@
 const things = [
     {
-        categories: ["Vision", "Hearing", "Neurodiversity"],
+        categories: ["Vision", "Speech", "Hearing", "Neurodiversity"],
         image: "immersive-reader.jpeg",
         title: "Microsoft Immersive Reader",
         description: "All-in-one tool for easier reading and text to speech.",

@@ -8,7 +8,7 @@ const SearchInfo = (props) =>
                 props.filteredTotal === props.thingsTotal ? <></> :
                     props.filteredTotal > 0 ?
                         <p className="search-subtitle">{props.filteredTotal} result{props.filteredTotal > 1 && "s"}</p> :
-                        <p className="search-subtitle">Nothing found matching your search.</p>
+                        <p className="search-subtitle">I'm working on adding more things to this list!</p>
             }
         </div>
     )

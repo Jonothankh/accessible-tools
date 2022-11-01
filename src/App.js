@@ -18,7 +18,9 @@ function App()
     {
       hearing: false,
       vision: false,
+      speech: false,
       neurodiversity: false,
+      mentalHealth: false,
       mobility: false
     }
   )
@@ -28,7 +30,9 @@ function App()
   const filteredItems = things.filter((thing) =>
     (selectedCategories.hearing ? thing.categories.includes("Hearing") : true)
     && (selectedCategories.vision ? thing.categories.includes("Vision") : true)
+    && (selectedCategories.speech ? thing.categories.includes("Speech") : true)
     && (selectedCategories.neurodiversity ? thing.categories.includes("Neurodiversity") : true)
+    && (selectedCategories.mentalHealth ? thing.categories.includes("Mental Health") : true)
     && (selectedCategories.mobility ? thing.categories.includes("Mobility") : true)
     && (selectedPlatform === "any" ? true : thing.platformSupport.includes(selectedPlatform))
   )

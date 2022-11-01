@@ -57,6 +57,19 @@ const HeaderBar = (props) =>
                     <label>
                         <input
                             // aria-hidden="true"
+                            aria-labelledby='speech_checkbox'
+                            type="checkbox"
+                            name="speech"
+
+                            onChange={event => { props.onChangeCategory("speech", event.target.checked) }}
+                        />
+                        <span id="speech_checkbox" aria-hidden="true">Speech</span>
+                    </label>
+                </li>
+                <li className="filter-checkbox-list-item">
+                    <label>
+                        <input
+                            // aria-hidden="true"
                             aria-labelledby='neurodiversity_checkbox'
                             type="checkbox"
                             name="neurodiveristy"
@@ -64,6 +77,19 @@ const HeaderBar = (props) =>
                             onChange={event => { props.onChangeCategory("neurodiversity", event.target.checked) }}
                         />
                         <span id="neurodiversity_checkbox" aria-hidden="true">Neurodiversity</span>
+                    </label>
+                </li>
+                <li className="filter-checkbox-list-item">
+                    <label>
+                        <input
+                            // aria-hidden="true"
+                            aria-labelledby='mental-health_checkbox'
+                            type="checkbox"
+                            name="mental-health"
+
+                            onChange={event => { props.onChangeCategory("mentalHealth", event.target.checked) }}
+                        />
+                        <span id="mental-health_checkbox" aria-hidden="true">Mental Health</span>
                     </label>
                 </li>
                 <li className="filter-checkbox-list-item">
