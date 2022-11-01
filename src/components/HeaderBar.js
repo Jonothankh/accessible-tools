@@ -26,7 +26,7 @@ const HeaderBar = (props) =>
         <header className="header">
             <h1 className="name">Accessible things</h1>
 
-            <ul className={"filter-wrapper " + filterScroll} role="search" onScroll={handleScroll}>
+            <ul className={"filter-wrapper " + filterScroll} onScroll={handleScroll}>
                 <li className="filter-checkbox-list-item">
                     <label>
                         <input
@@ -81,6 +81,7 @@ const HeaderBar = (props) =>
                 </li>
                 <li className="filter-dropdown-list-item">
                     <select
+                        aria-label="platforms"
                         name="platforms"
                         defaultValue="select-platform"
 
