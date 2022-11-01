@@ -61,6 +61,7 @@
 
 .filter-checkbox-list-item {
     display: inline-block;
+    white-space: nowrap;
 }
 
 input[type="checkbox"] {
@@ -81,6 +82,8 @@ span {
     display: inline-block;
     user-select: none;
     cursor: pointer;
+
+    white-space: nowrap;
 
     padding: 10px 15px;
     border-radius: 5px;
