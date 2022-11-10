@@ -31,41 +31,31 @@ export const things = [
             "Download Be My Eyes on Android": "https://play.google.com/store/apps/details?id=com.bemyeyes.bemyeyes"
         }
     },
+    // {
+    //     categories: ["Vision"],
+    //     image: "",
+    //     title: "TapTapSee",
+    //     description: "Identifies objects and reads them out via Voice Over.",
+    //     platformSupport: ["ios", "android"],
+    //     links: {
+    //         "Download TapTapSee on iOS": "https://itunes.apple.com/us/app/taptapsee/id567635020",
+    //         "Download TapTapSee on Android": "https://play.google.com/store/apps/details?id=com.msearcher.taptapsee.android"
+    //     }
+    // },
+    // {
+    //     categories: ["Vision"],
+    //     image: "",
+    //     title: "iDentifi",
+    //     description: "Identifies objects and reads them out.",
+    //     platformSupport: ["ios"],
+    //     links: {
+    //         "Download TapTapSee on iOS": "https://itunes.apple.com/us/app/taptapsee/id567635020",
+    //         "Download TapTapSee on Android": "https://play.google.com/store/apps/details?id=com.msearcher.taptapsee.android"
+    //     }
+    // },
     {
         categories: ["Vision"],
-        image: "",
-        title: "NantMobile Money Reader",
-        description: "Identifies and counts bills.",
-        platformSupport: ["ios"],
-        links: {
-            "Download NantMobile on iOS": "https://itunes.apple.com/us/app/looktel-money-reader/id417476558?mt=8"
-        }
-    },
-    {
-        categories: ["Vision"],
-        image: "",
-        title: "TapTapSee",
-        description: "Identifies objects and reads them out via Voice Over.",
-        platformSupport: ["ios", "android"],
-        links: {
-            "Download TapTapSee on iOS": "https://itunes.apple.com/us/app/taptapsee/id567635020",
-            "Download TapTapSee on Android": "https://play.google.com/store/apps/details?id=com.msearcher.taptapsee.android"
-        }
-    },
-    {
-        categories: ["Vision"],
-        image: "",
-        title: "iDentifi",
-        description: "Identifies objects and reads them out.",
-        platformSupport: ["ios"],
-        links: {
-            "Download TapTapSee on iOS": "https://itunes.apple.com/us/app/taptapsee/id567635020",
-            "Download TapTapSee on Android": "https://play.google.com/store/apps/details?id=com.msearcher.taptapsee.android"
-        }
-    },
-    {
-        categories: ["Vision"],
-        image: "",
+        image: "google_lookout.png",
         title: "Google Lookout",
         description: "Identifies objects and reads them out.",
         platformSupport: ["android"],
@@ -75,7 +65,7 @@ export const things = [
     },
     {
         categories: ["Vision"],
-        image: "",
+        image: "envision.jpeg",
         title: "Envision",
         description: "Identifies objects and reads them out. Strongest points are colour and person identification. Also good for generic objects.",
         platformSupport: ["android", "ios"],
@@ -124,7 +114,7 @@ export const things = [
     },
     {
         categories: ["Hearing"],
-        image: "",
+        image: "live_transcribe.jpeg",
         title: "Built-in live transcription",
         description: "Android and iOS devices can transcribe conversations near you.",
         platformSupport: ["ios", "android"],
@@ -146,7 +136,7 @@ export const things = [
     },
     {
         categories: ["Speech", "Hearing"],
-        image: "",
+        image: "tap_sos.webp",
         title: "TapSOS",
         description: "UK Only | Communicate with emergency services without needing to speak or listen",
         platformSupport: ["ios", "android"],
@@ -157,7 +147,7 @@ export const things = [
     },
     {
         categories: ["Mobility"],
-        image: "",
+        image: "sociability.jpeg",
         title: "Sociability",
         description: "Crowd-sourced app for finding accessible venues near you.",
         platformSupport: ["ios", "android", "browser"],
@@ -169,7 +159,7 @@ export const things = [
     },
     {
         categories: ["Mobility"],
-        image: "",
+        image: "accessable.png",
         title: "AccessAble",
         description: "App for finding accessible venues near you. Maintained by a team and partnered with major high street brands.",
         platformSupport: ["ios", "android", "browser"],
@@ -181,7 +171,7 @@ export const things = [
     },
     {
         categories: ["Mobility"],
-        image: "",
+        image: "passenger_assistance.jpeg",
         title: "Passenger Assistance",
         description: "UK Only | National Rail partnered app for booking assistance whilst traveling on trains.",
         platformSupport: ["ios", "android", "browser"],
@@ -193,7 +183,7 @@ export const things = [
     },
     {
         categories: ["Mobility"],
-        image: "",
+        image: "accessercise.jpeg",
         title: "Accessercise",
         description: "Fitness app created specifically for people with impairments.",
         platformSupport: ["ios", "android", "browser"],
@@ -204,7 +194,7 @@ export const things = [
     },
     {
         categories: ["Mental Health"],
-        image: "",
+        image: "headspace.webp",
         title: "Headspace",
         description: "Science-backed meditation and mindfulness tools.",
         platformSupport: ["ios", "android", "browser"],
@@ -216,7 +206,7 @@ export const things = [
     },
     {
         categories: ["Mental Health"],
-        image: "",
+        image: "thrive.png",
         title: "Thrive",
         description: "NHS recommended app for managing stress, anxiety and negative thoughts.",
         platformSupport: ["ios", "android", "browser"],

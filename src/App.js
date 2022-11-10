@@ -13,9 +13,14 @@ import { things, platforms } from './data/things'
 import PlatformTile from './components/PlatformTile';
 import PlatformTileWrapper from './components/PlatformTilesWrapper';
 
+// import { useSearchParams } from 'react';
+
 
 function App()
 {
+  // URL updates
+  // let [searchParams, setSearchParams] = useSearchParams();
+
   // Selected categories
   const [selectedCategories, setSelectedCategories] = useState(
     {
