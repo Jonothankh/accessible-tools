@@ -42,3 +42,10 @@
 .platform-tiles-wrapper.end::after {
     background: linear-gradient(to right, var(--main-2) 0%, transparent 10%);
 }
+
+@media only screen and (max-width: 600px) {
+    .platform-tiles-wrapper {
+        gap: 10px;
+    }
+
+}
