@@ -5,6 +5,7 @@ footer {
 
 .notice {
     color: var(--main-1);
+    padding: 0 20px;
 }
 
 .notice a {
