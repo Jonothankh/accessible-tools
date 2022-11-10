@@ -1,7 +1,7 @@
 export const things = [
     {
         categories: ["Vision", "Speech", "Hearing", "Neurodiversity"],
-        image: "immersive-reader.jpeg",
+        image: "immersive-reader.webp",
         title: "Microsoft Immersive Reader",
         description: "All-in-one tool for easier reading and text to speech.",
         platformSupport: ["browser", "windows", "macos", "ios", "android"],
@@ -12,7 +12,7 @@ export const things = [
     },
     {
         categories: ["Vision"],
-        image: "seeing-ai.jpeg",
+        image: "seeing-ai.webp",
         title: "Microsoft Seeing AI",
         description: "An app that narrates the world around you.",
         platformSupport: ["ios"],
@@ -22,7 +22,7 @@ export const things = [
     },
     {
         categories: ["Vision"],
-        image: "be-my-eyes.png",
+        image: "be-my-eyes.webp",
         title: "Be My Eyes",
         description: "Be My Eyes connects people needing sighted support with volunteers and companies through live video around the world.",
         platformSupport: ["ios", "android"],
@@ -55,7 +55,7 @@ export const things = [
     // },
     {
         categories: ["Vision"],
-        image: "google_lookout.png",
+        image: "google_lookout.webp",
         title: "Google Lookout",
         description: "Identifies objects and reads them out.",
         platformSupport: ["android"],
@@ -65,7 +65,7 @@ export const things = [
     },
     {
         categories: ["Vision"],
-        image: "envision.jpeg",
+        image: "envision.webp",
         title: "Envision",
         description: "Identifies objects and reads them out. Strongest points are colour and person identification. Also good for generic objects.",
         platformSupport: ["android", "ios"],
@@ -89,7 +89,7 @@ export const things = [
     },
     {
         categories: ["Vision", "Mobility"],
-        image: "soundscape.jpeg",
+        image: "soundscape.webp",
         title: "Microsoft Soundscape",
         description: "A map delivered in 3D sound.",
         platformSupport: ["ios"],
@@ -99,7 +99,7 @@ export const things = [
     },
     {
         categories: ["Hearing"],
-        image: "live-caption.jpeg",
+        image: "live-caption.webp",
         title: "Built-in captioning",
         description: "Captioning services built-in to devices. Note that some Android devices have AI powered Live Caption, which captions any audio even if it hasn't got captions.",
         platformSupport: ["windows", "macos", "ios", "android"],
@@ -114,7 +114,7 @@ export const things = [
     },
     {
         categories: ["Hearing"],
-        image: "live_transcribe.jpeg",
+        image: "live_transcribe.webp",
         title: "Built-in live transcription",
         description: "Android and iOS devices can transcribe conversations near you.",
         platformSupport: ["ios", "android"],
@@ -125,7 +125,7 @@ export const things = [
     },
     {
         categories: ["Hearing"],
-        image: "petralex.jpeg",
+        image: "petralex.webp",
         title: "Petralex",
         description: "Phone-based hearing aid.",
         platformSupport: ["ios", "android"],
@@ -147,7 +147,7 @@ export const things = [
     },
     {
         categories: ["Mobility"],
-        image: "sociability.jpeg",
+        image: "sociability.webp",
         title: "Sociability",
         description: "Crowd-sourced app for finding accessible venues near you.",
         platformSupport: ["ios", "android", "browser"],
@@ -159,7 +159,7 @@ export const things = [
     },
     {
         categories: ["Mobility"],
-        image: "accessable.png",
+        image: "accessable.webp",
         title: "AccessAble",
         description: "App for finding accessible venues near you. Maintained by a team and partnered with major high street brands.",
         platformSupport: ["ios", "android", "browser"],
@@ -171,7 +171,7 @@ export const things = [
     },
     {
         categories: ["Mobility"],
-        image: "passenger_assistance.jpeg",
+        image: "passenger_assistance.webp",
         title: "Passenger Assistance",
         description: "UK Only | National Rail partnered app for booking assistance whilst traveling on trains.",
         platformSupport: ["ios", "android", "browser"],
@@ -183,7 +183,7 @@ export const things = [
     },
     {
         categories: ["Mobility"],
-        image: "accessercise.jpeg",
+        image: "accessercise.webp",
         title: "Accessercise",
         description: "Fitness app created specifically for people with impairments.",
         platformSupport: ["ios", "android", "browser"],
@@ -206,7 +206,7 @@ export const things = [
     },
     {
         categories: ["Mental Health"],
-        image: "thrive.png",
+        image: "thrive.webp",
         title: "Thrive",
         description: "NHS recommended app for managing stress, anxiety and negative thoughts.",
         platformSupport: ["ios", "android", "browser"],
