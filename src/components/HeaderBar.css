@@ -122,7 +122,7 @@ select {
     background-position-y: 5px;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 900px) {
     .filter-wrapper::after {
         left: 30px;
         right: 30px;

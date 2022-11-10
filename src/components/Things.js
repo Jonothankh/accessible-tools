@@ -3,9 +3,9 @@ import './Things.css'
 const Things = (props) =>
 {
     return (
-        <div className="things-wrapper">
+        <section className="things-wrapper">
             {props.children}
-        </div>
+        </section>
     )
 }
 

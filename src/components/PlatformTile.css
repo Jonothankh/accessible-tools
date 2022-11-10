@@ -1,0 +1,80 @@
+.platform-card {
+    min-width: 400px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+
+    background-color: var(--back-1);
+    backdrop-filter: blur(10px);
+
+
+    transition: 0.25s all ease;
+
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: transparent;
+    outline-offset: 0px;
+}
+
+.platform-card:hover {
+    outline-color: var(--main-1);
+    outline-offset: 5px;
+}
+
+.platform-card-title {
+    display: inline;
+    padding: 0 20px 0 10px;
+    margin: 0 0 15px 0;
+    font-size: 1.5rem;
+
+    color: var(--main-1);
+}
+
+.platform-card-links-wrapper {
+    padding: 0 10px;
+}
+
+.platform-card-link {
+    color: var(--main-1);
+    display: inline-block;
+
+    margin: 5px 20px 5px 0;
+
+    padding: 10px 0 10px 0;
+
+    font-weight: bold;
+
+    text-decoration: none;
+    text-decoration-color: var(--main-1);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 7px;
+}
+
+.platform-card-link:hover {
+    text-decoration-thickness: 2px;
+}
+
+.platform-card-link.individual-clickable {
+    position: relative;
+    z-index: 2;
+}
+
+.platform-card-link.whole-card-clickable::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+}
+
+.card-platform-icon {
+    padding: 10px;
+}
+
+.platform-icon-item {
+    vertical-align: middle;
+    padding-bottom: 5px;
+    display: inline-block;
+}

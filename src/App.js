@@ -9,11 +9,14 @@ import Thing from './components/Thing';
 import Things from './components/Things';
 import Footer from './components/Footer';
 
-import things from './data/things'
+import { things, platforms } from './data/things'
+import PlatformTile from './components/PlatformTile';
+import PlatformTileWrapper from './components/PlatformTilesWrapper';
 
 
 function App()
 {
+  // Selected categories
   const [selectedCategories, setSelectedCategories] = useState(
     {
       hearing: false,
@@ -25,8 +28,15 @@ function App()
     }
   )
 
+  // Selected platform
   const [selectedPlatform, setSelectedPlatform] = useState('any')
 
+  // Filtered platforms
+  const filteredPlatforms = platforms.filter((platform) =>
+    selectedPlatform === "any" ? true : platform.platforms.includes(selectedPlatform)
+  )
+
+  // Filtered items and filtered items amount
   const filteredItems = things.filter((thing) =>
     (selectedCategories.hearing ? thing.categories.includes("Hearing") : true)
     && (selectedCategories.vision ? thing.categories.includes("Vision") : true)
@@ -38,6 +48,7 @@ function App()
   )
   const filteredTotal = filteredItems.length
 
+  // Main return
   return (
     <div className="App">
 
@@ -66,8 +77,23 @@ function App()
           thingsTotal={things.length}
         />
 
-        <Things>
+        <PlatformTileWrapper>
 
+          {
+            filteredPlatforms.map((platform, index) => (
+              <PlatformTile
+                key={"platform_" + index}
+
+                title={platform.title}
+                links={platform.links}
+              />
+            ))
+          }
+
+        </ PlatformTileWrapper>
+
+
+        <Things>
           {
             filteredItems.map((thing, index) => (
               <Thing

@@ -1,0 +1,44 @@
+.platform-tiles-wrapper {
+    overflow: scroll;
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    margin: 0 25px;
+    padding: 10px 10px;
+
+    margin-top: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    gap: 40px;
+}
+
+.platform-tiles-wrapper::after {
+    left: 20px;
+    right: 20px;
+    top: 0;
+    transform: translateY(-2px);
+    content: "";
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+    pointer-events: none;
+    background: transparent;
+}
+
+.platform-tiles-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.platform-tiles-wrapper.middle::after {
+    background: linear-gradient(to right, var(--main-2) 0%, transparent 10%), linear-gradient(to right, transparent 90%, var(--main-2) 100%);
+}
+
+.platform-tiles-wrapper.start::after {
+    background: linear-gradient(to right, transparent 90%, var(--main-2) 100%);
+}
+
+.platform-tiles-wrapper.end::after {
+    background: linear-gradient(to right, var(--main-2) 0%, transparent 10%);
+}
