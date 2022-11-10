@@ -6,7 +6,7 @@ const PlatformTile = (props) =>
 {
     return (
         <div className='platform-card'>
-            <IconContext.Provider value={{ color: '#d1e4ff', size: '2rem', className: "card-platform-icon" }}>
+            <IconContext.Provider value={{ color: '#d1e4ff', size: '2rem', className: "platform-tile-icon" }}>
                 {(() =>
                 {
                     switch (props.title) 
