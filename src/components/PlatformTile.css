@@ -1,5 +1,5 @@
 .platform-card {
-    min-width: 400px;
+    /* min-width: 400px; */
     display: inline-block;
     padding: 20px;
     border-radius: 5px;
@@ -23,15 +23,17 @@
 
 .platform-card-title {
     display: inline;
-    padding: 0 20px 0 10px;
+    /* padding: 0 20px 0 10px; */
     margin: 0 0 15px 0;
     font-size: 1.5rem;
+
+    white-space: nowrap;
 
     color: var(--main-1);
 }
 
 .platform-card-links-wrapper {
-    padding: 0 10px;
+    /* padding: 0 10px; */
 }
 
 .platform-card-link {
@@ -43,6 +45,8 @@
     padding: 10px 0 10px 0;
 
     font-weight: bold;
+
+    white-space: nowrap;
 
     text-decoration: none;
     text-decoration-color: var(--main-1);
@@ -70,11 +74,11 @@
 }
 
 .card-platform-icon {
-    padding: 10px;
+    padding: 0 0 10px 0;
 }
 
 .platform-icon-item {
-    vertical-align: middle;
+    /* vertical-align: middle; */
     padding-bottom: 5px;
-    display: inline-block;
+    display: block;
 }
