@@ -147,6 +147,18 @@ export const things = [
     },
     {
         categories: ["Mobility"],
+        image: "google_maps.webp",
+        title: "Google Maps Accessible places",
+        description: "Google Maps built-in accessible places setting.",
+        platformSupport: ["ios", "android"],
+        links: {
+            "Download Google Maps on iOS": "https://apps.apple.com/us/app/google-maps/id585027354",
+            "Download Google Maps on Android": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps",
+            "How to enable Accessbible places": "https://support.google.com/maps/answer/9882117"
+        }
+    },
+    {
+        categories: ["Mobility"],
         image: "sociability.webp",
         title: "Sociability",
         description: "Crowd-sourced app for finding accessible venues near you.",
